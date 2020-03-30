@@ -12,16 +12,10 @@ namespace Snake
 
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
-
-            Point p3 = new Point(6, 10, '&');
-            Point p4 = new Point(3, 170, '?');
-            List<char> symbolList = new List<char>() { p1.symbol, p2.symbol, p3.symbol, p4.symbol };
-            List<Point> pointList = new List<Point>();
-            pointList.Add(p1);
-            pointList.Add(p2);
-            pointList.Add(p3);
-            pointList.Add(p4);
-
+            LineDrawer line = new LineDrawer(4, 10, true, 9, '*');
+            line.Draw();
+            LineDrawer line2 = new LineDrawer(6, 12, false, 10, '*');
+            line2.Draw();
             Console.ReadKey();
         }
     }
