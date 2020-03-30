@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Snake
 {
@@ -12,50 +13,16 @@ namespace Snake
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-            int x = 1;
-            Func1(x);
-            Console.WriteLine($"Func1 x={x}");
-
-            Func2(x);
-            Console.WriteLine($"Func2 x={x}");
-
-            Func3(x);
-            Console.WriteLine($"Func3 x={x}");
-
-            Move(p1, 10, 10);
-            Console.WriteLine($"Move(p1, 10, 10) p1.x = {p1.x}, p1.y = {p1.y}");
-
-            Reset(p2);
-            Console.WriteLine($"Reset(p2) p2.x = {p2.x}, p2.y = {p2.y}");
+            Point p3 = new Point(6, 10, '&');
+            Point p4 = new Point(3, 170, '?');
+            List<char> symbolList = new List<char>() { p1.symbol, p2.symbol, p3.symbol, p4.symbol };
+            List<Point> pointList = new List<Point>();
+            pointList.Add(p1);
+            pointList.Add(p2);
+            pointList.Add(p3);
+            pointList.Add(p4);
 
             Console.ReadKey();
-        }
-
-        private static void Reset(Point p)
-        {
-            p = new Point();
-            //  Здесь переменная p2 останется без изменений.
-        }
-
-        private static void Move(Point p, int dx, int dy)
-        {
-            p.x = p.x + dx;
-            p.y = p.y + dy;
-        }
-
-        private static void Func3(int x)
-        {
-            x++;
-        }
-
-        private static void Func2(int val)
-        {
-            val++;
-        }
-
-        private static void Func1(int x)
-        {
-
         }
     }
 }
