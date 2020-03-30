@@ -9,7 +9,8 @@ namespace Snake
         public int x;
         public int y;
         public char symbol;
-
+        public Point()
+        { }
         public Point(int x, int y, char symbol)
         {
             this.x = x;
