@@ -17,10 +17,38 @@ namespace Snake
             this.y = y;
             this.symbol = symbol;
         }
+        public Point(Point point)
+        {
+            this.x = point.x;
+            this.y = point.y;
+            this.symbol = point.symbol;
+        }
+        public void Move(int offset, Direction direction)
+        {
+            switch (direction) 
+            {
+                case Direction.Left:
+                    x -= offset;
+                    break;
+                case Direction.Right:
+                    x += offset;
+                    break;
+                case Direction.Up:
+                    y += offset;
+                    break;
+                case Direction.Down:
+                    y -= offset;
+                    break;
+            }
+        }
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(symbol);
+        }
+        public override string ToString()
+        {
+            return $"{x}, {y}, {symbol}";
         }
     }
 }
