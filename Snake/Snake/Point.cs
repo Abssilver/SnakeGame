@@ -46,6 +46,11 @@ namespace Snake
             Console.SetCursorPosition(x, y);
             Console.Write(symbol);
         }
+        public void Clear()
+        {
+            symbol = ' ';
+            Draw();
+        }
         public override string ToString()
         {
             return $"{x}, {y}, {symbol}";
