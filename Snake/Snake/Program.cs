@@ -48,6 +48,8 @@ namespace Snake
                     snake.HandleMoving(key.Key);
                 }
             }
+            walls.EndGame();
+            Console.ReadLine();
         }
     }
 }
