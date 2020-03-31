@@ -35,7 +35,18 @@ namespace Snake
             nextPoint.Move(1, direction);
             return nextPoint;
         }
-
+        internal bool IsHitTail()
+        {
+            Point head = pointList.Last();
+            for (int i = 0; i < pointList.Count-2; i++)
+            {
+                if (head.IsHit(pointList[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         internal void HandleMoving(ConsoleKey key)
         {
             switch (key)
