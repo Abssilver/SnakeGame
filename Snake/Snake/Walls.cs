@@ -15,8 +15,8 @@ namespace Snake
             mapHeight = _mapHeight;
             HorizontalLine top = new HorizontalLine(2, _mapWidth - 1, 0, '+');
             HorizontalLine bottom = new HorizontalLine(2, _mapWidth - 1, _mapHeight - 1, '+');
-            VerticalLine left = new VerticalLine(0, _mapHeight - 1, 1, '+');
-            VerticalLine right = new VerticalLine(0, _mapHeight - 1, _mapWidth - 1, '+');
+            VerticalLine left = new VerticalLine(0, _mapHeight, 1, '+');
+            VerticalLine right = new VerticalLine(0, _mapHeight, _mapWidth - 1, '+');
 
             wallList.Add(top);
             wallList.Add(bottom);
