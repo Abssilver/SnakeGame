@@ -34,10 +34,10 @@ namespace Snake
                     x += offset;
                     break;
                 case Direction.Up:
-                    y += offset;
+                    y -= offset;
                     break;
                 case Direction.Down:
-                    y -= offset;
+                    y += offset;
                     break;
             }
         }
