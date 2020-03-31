@@ -8,6 +8,22 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            /*
+            VerticalLine v1 = new VerticalLine(0, 10, 5, '%');
+            HorizontalLine h1 = new HorizontalLine(0, 5, 6, '&');
+            Point p = new Point(4, 5, '*');
+            Figure fSnake = new Snake(p, 4, Direction.Right);
+            Snake snake = (Snake)fSnake;
+            List<Figure> figures = new List<Figure>();
+            figures.Add(fSnake);
+            figures.Add(v1);
+            figures.Add(h1);
+            foreach (var fig in figures)
+            {
+                fig.Draw();
+            }
+            */
+
             Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80, 25);
 
