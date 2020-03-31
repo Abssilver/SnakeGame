@@ -55,5 +55,10 @@ namespace Snake
         {
             return $"{x}, {y}, {symbol}";
         }
+
+        internal bool IsHit(Point point)
+        {
+            return point.x == this.x && point.y == this.y;
+        }
     }
 }
